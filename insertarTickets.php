@@ -3,9 +3,10 @@
 include "conexion.php";
 session_start();
 
-$folio = $_POST['folio'];
+$mantenimiento = $_POST['mantenimiento'];
+$mantenimientoSerialize = serialize($mantenimiento);
+//$folio = $_POST['folio'];
 $fecha_captura = $_POST['fecha_captura'];
-$mantenimiento = $_POST['checkbox'];
 $problema = $_POST['problema'];
 $id_personal = $_POST['personal'];
 $tipo_de_equipo = $_POST['tipo_de_equipo'];
@@ -17,12 +18,11 @@ $mac=$_POST['mac'];
 $ip=$_POST['ip'];
 $no_inventario=$_POST['noinventario'];
 $so=$_POST['so'];
-
 $id_usuario = $_SESSION['id'];
 
-$sql = "INSERT INTO ticket (folio,fecha_captura,problema,mantenimiento,id_personal,id_usuario,tipo_de_equipo,marca,modelo,ram,discoduro,ip,no_inventario,so) VALUES (
-     '$folio','$fecha_captura','$problema','$mantenimiento','$id_personal','$id_usuario','$tipo_de_equipo','$mac','$modelo','$ram','$discoduro','$ip','$no_inventario','$so')";
-$result = mysql_query($sql, $conn) or die(mysql_error());
+$sql = "INSERT INTO ticket (fecha_captura,problema,mantenimiento,id_personal,id_usuario,tipo_de_equipo,marca,modelo,ram,discoduro,ip,no_inventario,so) VALUES (
+     '$fecha_captura','$problema','$mantenimientoSerialize','$id_personal','$id_usuario','$tipo_de_equipo','$mac','$modelo','$ram','$discoduro','$ip','$no_inventario','$so')";
+ $result = mysql_query($sql, $conn) or die(mysql_error());
 if (!$result) {
     die("<p>Fallo en la incercion de registro en la Base de datos;" . mysql_error() . "</p>");
 } else {
@@ -31,6 +31,5 @@ if (!$result) {
 
             
 }
-
 mysql_close();
 ?>

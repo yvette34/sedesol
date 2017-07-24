@@ -92,7 +92,7 @@ include_once('session.php');
                         echo "<tr><td>";
                         echo $row['folio'];
                         echo '</td><td>';
-                        echo $row['mantenimiento'];
+                        echo implode(', ', unserialize($row['mantenimiento']));
                         echo '</td><td>';
                         echo $row['problema'];
                         echo '</td><td>';

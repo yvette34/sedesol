@@ -87,7 +87,7 @@
                                         <label for="folio">Folio:</label>
                                         <br>
                                        <!-- <label for="folio" class="folio">1234</label>-->
-                                       <input type="number" class="form-control" id="folio" name="folio" placeholder="Núm. folio" required> 
+                                       <input type="number" class="form-control" id="folio" name="folio" placeholder="Núm. folio" > 
                                     </div>
                                     <div class="col-md-2">              
                                         <label for="fecha_captura">Fecha de Captura:</label>
@@ -98,50 +98,59 @@
                             <div class="form-group">
                             <div class="row">
                             <div class="col-md-4">
-                                    <label for="mantenimiento"><b>Asistencia Técnica</b></label>        
+                                    <label for="mantenimiento[]"><b>Asistencia Técnica</b></label>        
                                     <label><b>Indique los problemas que presente el equipo:</b></label> 
                             </div>
                             <div class="col-md-4">
-                                        <label for="mantenimiento"><b>Revisión / Mantenimiento</b></label>  
+                                        <label for="mantenimiento[]"><b>Revisión / mantenimiento[]</b></label>  
                                         <label><b>Indique los dispositivos con:</b></label>
                             </div>
                             <div class="col-md-4">
-                                        <label for="mantenimiento"><b>Instalar / Reinstalar Programas</b></label>
+                                        <label for="mantenimiento[]"><b>Instalar / Reinstalar Programas</b></label>
                                         <label><b>Seleccione los programas  a instalar:</b></label>
                             </div>
                             
-                                    <div class="col-md-4">
-                                          <input type="checkbox" name="mantenimiento" value="1"> No Prende <br>
-                                          <input type="checkbox" name="mantenimiento" value="2" checked> Se Reinicia<br>
-                                          <input type="checkbox" name="mantenimiento" value="3" checked> Configurar Correo<br>
-                                          <input type="checkbox" name="mantenimiento" value="4" checked> Archivos Perdidos<br>
-                                          <input type="checkbox" name="mantenimiento" value="5" checked> 
-                                          Bloqueo / Lentitud<br>
-                                          <input type="checkbox" name="mantenimiento" value="6" checked> Mensaje de Error    <br>
-                                          <input type="checkbox" name="mantenimiento" value="7" checked> Configurar Impresora<br>
-                                          
-                                    <div class="col-md-4">
-                                        <input type="checkbox" name="mantenimiento" value="8">           Impresora       <br>
-                                        <input type="checkbox" name="mantenimiento" value="9" checked>   Teclado / Ratón <br>
-                                        <input type="checkbox" name="mantenimiento" value="10" checked>  Pantalla        <br>
-                                        <input type="checkbox" name="mantenimiento" value="11" checked>  Regulador       <br>
-                                        <input type="checkbox" name="mantenimiento" value="12" checked>  Unidad CD/DVD   <br>
-                                         <input type="checkbox" name="mantenimiento" value="13" checked> Puerto USB      <br>
-                                         <input type="checkbox" name="mantenimiento" value="14" checked>Sonido           <br>
+                                 <div class=" radio row">
+                                <div class="radio">
+                                    <div class="radio col-md-4">
                                        
+                                        <input type="checkbox" name="mantenimiento[]" value="1"> No Prende              <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="2"> Se Reinicia            <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="3"> Malware (virus)        <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="4"> Configurar Correo      <br>            
+                                        <input type="checkbox" name="mantenimiento[]" value="5"> Archivos Perdidos      <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="6"> Bloqueo/lentitud       <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="7"> Mensaje de Error       <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="8"> Conexión a la Red      <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="9"> Configurar Impresora   <br>
                                     </div>
-                                    <div class="col-md-4">
-                                         <input type="checkbox" name="mantenimiento" value="8"> Impresora 
-                                         <input type="checkbox" name="mantenimiento" value="9" checked> Teclado / Ratón  <br>
-                                         <input type="checkbox" name="mantenimiento" value="10" checked> Pantalla        <br>
-                                         <input type="checkbox" name="mantenimiento" value="11" checked> Regulador       <br>
-                                          <input type="checkbox" name="mantenimiento" value="12" checked> Unidad CD/DVD  <br>
-                                          <input type="checkbox" name="mantenimiento" value="13" checked> Puerto USB 
-                                          <input type="checkbox" name="mantenimiento" value="14" checked> Sonido 
+                                   
+                                    <div class="radio col-md-4">
+                                       
+                                        <input type="checkbox" name="mantenimiento[]" value="10"> Impresora             <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="11"> Teclado/Ratón         <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="12"> Pantalla              <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="13"> Regulador             <br>            
+                                        <input type="checkbox" name="mantenimiento[]" value="14"> Unidad CD/DVD         <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="15"> Puertos USB           <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="16"> Sonido                <br>
+                                    </div>
+                                    <div class="radio col-md-4">
+                                        
+                                        <input type="checkbox" name="mantenimiento[]" value="17"> Formateo (Todo)       <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="18">Antivirus              <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="19"> Paquete Office        <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="20"> Lector Archivos PD    <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="21"> PhotoShop - Core      <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="22"> Quemador CD/DVD       <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="23"> Impresora             <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="24"> Reproductor DVD       <br>
                                     </div>
                                 </div>
                             </div>
-                            </div>
+                        </div>
+                    </div>
+                </div>>
                            
                             <div class="form-group">
                             <div class="row">

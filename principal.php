@@ -24,7 +24,7 @@ include_once('session.php');
     </head>
     <body>
                    <?php
-                     if ($_SESSION['tipo'] == 'admin'){
+                     if ($_SESSION['tipo'] == 'admin');
                 ?>
     <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -50,10 +50,22 @@ include_once('session.php');
                     <li ><a href="AgregarUsuario.php">Agregar Usuario</a></li>
               
                     <li><a href="logout.php">Cerrar Sesión</a></li>
-                    <?php
-                }
-                    ?>
+                 
 
+                         <?php
+                     if ($_SESSION['tipo'] == 'capturista');
+                ?>
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <div clas="col-sm-8">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="principal.php">SEDESOL</a></li>       
+               
+                
+                    <li ><a href="Tickets.php">Agregar Nuevo Ticket</a></li>
+
+ <li><a href="logout.php">Cerrar Sesión</a></li>
 
 
 
