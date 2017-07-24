@@ -1,0 +1,30 @@
+<?php
+session_start();
+include"conexion.php";
+
+        $nombre = $_POST['nombre'];
+        $apellido_p = $_POST['apellido_p'];
+        $apellido_m = $_POST['apellido_m'];
+        $tipo = $_POST['tipo'];
+        $usuario = $_POST['usuario'];
+        $contrasenaM=md5($_POST['contrasena']);
+        $repetircontrasenaM = md5($_POST['repetircontrasena']);
+        
+        if($contrasenaM == $repetircontrasenaM){
+            $sql = "INSERT INTO usuarios (nombre,apellido_p,apellido_m,usuario,contrasena,tipo) VALUES ('$nombre','$apellido_p','$apellido_m','$usuario','$contrasenaM','$tipo')";
+            $result = mysql_query($sql, $conn);
+            
+            if($result){
+               
+                header('Location:AgregarUsuario.php');
+                echo "<SCRIPT TYPE='text/javascript'> alert(\"Datos Guardados\"); 
+            window.location='AgregarUsuario.php'</SCRIPT>";
+                
+            } 
+            
+        }
+        
+
+ 
+?>
+       

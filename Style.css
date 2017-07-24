@@ -1,0 +1,29 @@
+.espacio{
+    margin-top: 80px;
+   margin-left: 40px;
+   margin-right: 40px;
+}
+
+ #alerta{
+ background-color: #fff;
+ color: #AE0512;
+ width: 240px;
+ z-index: 3;
+ visibility: visible;
+ height: auto;
+ -webkit-border-radius: 5px;
+ -moz-border-radius: 5px;
+ border-radius: 5px; 
+
+ border: 2px solid #F2F2F2;
+ right: 40%;
+ top: 10%;
+ padding-top: 18px;
+ padding-bottom: 18px;
+ text-align: center;
+ display: inline;
+ font-weight:bold;
+ }
+ 
+
+
