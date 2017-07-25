@@ -16,11 +16,16 @@ $folio=$_GET['folio'];
         <title>Agregar ticket</title>
     </head>
     <body>
-         <nav class="navbar navbar-default">
+          <nav class="navbar navbar-inverse navbar-fixed-top">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <div clas="col-sm-12">
+
                             <ul class="nav navbar-nav">
+                                <button type="button"class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>                        
+                                </button>
                                 
                                 <li><a href="principal.php">SEDESOL</a></li>       
                                 <li ><a href="Tickets.php">Agregar Nuevo Ticket</a></li> 

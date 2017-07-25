@@ -21,8 +21,8 @@ session_destroy();
 
 
 
-    <body>
-                  <img src="sedesol1.jgp">
+    <body background="sedesol1.jpg" style="background-repeat: no-repeat; background-position: center center;">
+                  
             <div class="container">
                 <center>
            <h2><b>Sistema De Soporte Técnico</b></h2>

@@ -30,12 +30,16 @@ and open the template in the editor.
              <?php
             if ($_SESSION['tipo'] == 'admin'){
                 ?>
-    <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-        <div clas="col-sm-12">
-        <ul class="nav navbar-nav">
+     <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
 
+                            <ul class="nav navbar-nav">
+                                <button type="button"class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>                        
+                                </button>
 
           
                 <?php

@@ -9,8 +9,7 @@
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
             <link href="Style.css" rel="stylesheet" type="text/css">
             <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-            <link rel="stylesheet" type="text/css" href="css/jquery-confirm.css">
-            <script type="text/javascript" src="js/jquery-confirm.js"></script>
+            
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
             <script type="text/javascript" src="js/jquery.js"></script>
@@ -22,12 +21,16 @@
                          <?php
             if ($_SESSION['tipo'] == 'admin'){
                 ?>
-               
-            <nav class="navbar navbar-default">
+                <nav class="navbar navbar-inverse navbar-fixed-top">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <div clas="col-sm-12">
+
                             <ul class="nav navbar-nav">
+                                <button type="button"class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>                        
+                                </button>
                                 
                                 <li><a href="principal.php">SEDESOL</a></li>       
                                 <li class="active"><a href="Tickets.php">Agregar Nuevo Ticket</a></li> 
@@ -47,14 +50,19 @@
             <?php
             }else{
             ?>
-                       <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-        <div clas="col-sm-12">
-        <ul class="nav navbar-nav">
+                        <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+
+                            <ul class="nav navbar-nav">
+                                <button type="button"class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>                        
+                                </button>
 
                  <?php
-                echo $_SESSION['nombre'];
+                //echo $_SESSION['nombre'];
                 ?>
 
              <li><a href="principal.php">SEDESOL</a></li>
@@ -83,12 +91,7 @@
                                             <option  value = ""  disabled  selected  style = " display : none ; " > Cargando Personal...</option> 
                                         </select> 
                                     </div>
-                                    <div class="col-md-2">  
-                                        <label for="folio">Folio:</label>
-                                        <br>
-                                       <!-- <label for="folio" class="folio">1234</label>-->
-                                       <input type="number" class="form-control" id="folio" name="folio" placeholder="Núm. folio" > 
-                                    </div>
+                                    
                                     <div class="col-md-2">              
                                         <label for="fecha_captura">Fecha de Captura:</label>
                                         <input type="date" class="form-group" id="fecha_captura" name="fecha_captura"  required>

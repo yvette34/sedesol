@@ -1,7 +1,5 @@
 <?php
-//echo  "la sesion es ".$_SESSION['tipo']."  ".$_SESSION['id'];
-//$tipo=$_SESSION['tipo'];
-//echo ("el tipo es: ".$tipo);
+
 include_once('session.php');
 ?>
 
@@ -9,7 +7,7 @@ include_once('session.php');
 <html>
     <head>
 
-        <meta name="viewport" content="initial-scale=1.0">
+        <meta name="viewport" content="initial-scale=1.1">
 
         <meta charset="utf-8">
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
@@ -18,62 +16,69 @@ include_once('session.php');
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-<!--              <link href="Style1.css" rel="stylesheet" type="text/css">-->
-
+      
 
     </head>
-    <body>
-                   <?php
-                     if ($_SESSION['tipo'] == 'admin');
-                ?>
-    <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-        <div clas="col-sm-8">
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="principal.php">SEDESOL</a></li>       
-               
-                
-                    <li ><a href="Tickets.php">Agregar Nuevo Ticket</a></li>
-               
-                
-                    <li><a href="Personal.php">Personal</a></li>
-                
-               
-                    <li><a href="Area.php">Área</a></li>
-                
-                
-                    <li><a href="Tickets_Abiertos.php">Lista De Tickets Abiertos</a></li>
-                
-                    <li><a href="Ticket_Cerrado.php">Lista De Ticket Cerrado</a></li>
-                
-                    <li ><a href="AgregarUsuario.php">Agregar Usuario</a></li>
-              
-                    <li><a href="logout.php">Cerrar Sesión</a></li>
-                 
+    <body background="logoestado.jpg" style="background-repeat: no-repeat; background-position: center center;" data-spy="scroll" data-target=".navbar" data-offset="50" >                                                                         
+        <?php
+        if ($_SESSION['tipo'] == 'admin') {
+            ?>
 
-                         <?php
-                     if ($_SESSION['tipo'] == 'capturista');
-                ?>
-    <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-        <div clas="col-sm-8">
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="principal.php">SEDESOL</a></li>       
-               
-                
-                    <li ><a href="Tickets.php">Agregar Nuevo Ticket</a></li>
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
 
- <li><a href="logout.php">Cerrar Sesión</a></li>
+                            <ul class="nav navbar-nav">
+                                <button type="button"class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>                        
+                                </button>
+                            
+                            <li class="active"><a href="principal.php">SEDESOL</a></li>       
+                            <li><a href="Tickets.php">Agregar Nuevo Ticket</a></li> 
+                            <li><a href="Personal.php">Personal</a></li>       
+                            <li><a href="Area.php">Área</a></li>        
+                            <li><a href="Tickets_Abiertos.php">Lista De Tickets Abiertos</a></li>     
+                            <li><a href="Ticket_Cerrado.php">Lista De Ticket Cerrado</a></li>               
+                            <li><a href="AgregarUsuario.php">Agregar Usuario</a></li>             
+                            <li><a href="logout.php">Cerrar Sesión</a></li>            
 
+                        </ul>
+                    </div>
+                </div>
+            </nav>
 
+            <?php
+        } else {
+            ?>
 
-        </ul>
-        </div>
-    </div>
+       <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
 
-</div>
-</nav>
+                            <ul class="nav navbar-nav">
+                                <button type="button"class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>                        
+                                </button>
+                                <?php
+                                // echo $_SESSION['nombre'];
+                                ?>
+
+                                <li class="active"><a href="principal.php">SEDESOL</a></li>
+                                <li><a href="Tickets.php">Agregar Nuevo Ticket</a></li>
+                                <li><a href="logout.php">Cerrar Sesión</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+
+            <?php
+        }
+        ?>
     </body>
 </html>
