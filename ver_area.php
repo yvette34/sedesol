@@ -51,20 +51,20 @@ include_once('session.php');
                                     <li><a href="Ticket_Cerrado.php">Lista De Ticket Cerrado</a></li> 
                                 </ul>
                                  </li>
-                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Personal</a>
+                                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Personal</a>
                                 <ul class="dropdown-menu">
-                                    <li class="active"><a href="Personal.php  ?>">Agregar Personal</a></li>
-                                    <li ><a href="tabla_personal.php">Tabla del Personal</a></li>     
+                                    <li><a href="Personal.php  ?>">Agregar Personal</a></li>
+                                    <li class="active"><a href="tabla_personal.php">Tabla del Personal</a></li>     
                                   
                                 </ul>
                                  </li>
-                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Área</a>
+
+                                  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Área</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="Area.php">Agregar Área</a></li>
                                     <li class="active"><a href="ver_area.php">Tabla del Área</a></li>   
                                 </ul>
-                                 </li> 
-                   
+                                 </li>
                     <li><a href="AgregarUsuario.php">Agregar Usuario</a></li>
                     <li><a href="logout.php">Cerrar Sesión</a></li>
              
@@ -84,31 +84,29 @@ include_once('session.php');
         <table class="table table-striped">
             <tbody>
                 <tr>
-                <th><strong>Folio</strong></th>
-                <th><strong>Mantenimiento</strong></th>
-                <th><strong>Problema</strong></th>
-                <th><strong>Fecha Captura</strong></th>
-                 <th><strong>Revisar</strong></th>
+                <th><strong>Nombre de Área</strong></th>
+                <th><strong>Número de Extensión</strong></th>
+                <th><strong>Piso</strong></th>
+                
                 </tr>
 
                 <?php
-                $sql = "SELECT folio,fecha_captura,problema,mantenimiento FROM ticket WHERE estado='abierto'";
+                $sql = "SELECT id_area,nombre_area,ext,piso FROM areas ";
                 $result = mysql_query($sql, $conn) or die(mysql_error());
                 if (!$result) {
                     die("<p>Fallo en la incercion de registro en la Base de datos;" . mysql_error() . "</p>");
                 } else {
                     while ($row=  mysql_fetch_assoc($result)){
                         echo "<tr><td>";
-                        echo $row['folio'];
+                        echo $row['id_area'];
                         echo '</td><td>';
-                        echo implode(', ', unserialize($row['mantenimiento']));
+                        echo $row['nombre_area'];
                         echo '</td><td>';
-                        echo $row['problema'];
+                        echo $row['ext'];
                         echo '</td><td>';
-                        echo $row['fecha_captura'];
+                        echo $row['piso'];
                         echo '</td><td>';
-                        echo "<a href='Solucion.php?folio=" .$row['folio']."'>resolver</a>";  
-                        echo '</td></tr>';
+                       
                         
                     } 
                 }
@@ -131,6 +129,18 @@ include_once('session.php');
       ?>
         </div>
         
-       
+        <footer>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+    <div class="footer-bottom">
+        <div class="container">
+            
+            <div class="pull-right">
+                <p>Copyright ©Yvette Hernández Acevedo y Roberto Armando Correa Rivera</p>
+            </div>
+        </div>
+    </div>
+    <!--/.footer-bottom--> 
+</footer>
     </body>
 </html>

@@ -44,20 +44,31 @@ include_once('session.php');
 
                
             <li><a href="principal.php">SEDESOL</a></li>       
+             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Tickets</a>
+                <ul class="dropdown-menu">
+                  <li><a href="Tickets.php">Agregar Nuevo Ticket</a></li>
+                  <li><a href="Tickets_Abiertos.php">Lista De Tickets Abiertos</a></li>     
+                  <li class="active"><a href="Ticket_Cerrado.php">Lista De Ticket Cerrado</a></li> 
+                 </ul>
+             </li>
+                
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Personal</a>
+                                <ul class="dropdown-menu">
+                                    <li class="active"><a href="Personal.php  ?>">Agregar Personal</a></li>
+                                    <li ><a href="tabla_personal.php">Tabla del Personal</a></li>     
+                                  
+                                </ul>
+                                 </li>
+                
                
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Área</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="Area.php">Agregar Área</a></li>
+                                    <li class="active"><a href="ver_area.php">Tabla del Área</a></li>   
+                                </ul>
+                                 </li> 
                 
-                    <li><a href="Tickets.php">Agregar Nuevo Ticket</a></li>
-               
-                
-                    <li><a href="Personal.php">Personal</a></li>
-                
-               
-                    <li><a href="Area.php">Área</a></li>
-                
-                
-                    <li><a href="Tickets_Abiertos.php">Lista De Tickets Abiertos</a></li>
-                
-                    <li class="active"><a href="Ticket_Cerrado.php">Lista De Ticket Cerrado</a></li>
+                    
                 
                     <li><a href="AgregarUsuario.php">Agregar Usuario</a></li>
               
@@ -81,26 +92,26 @@ include_once('session.php');
                     
                 
                 <th><strong>Folio</strong></th>
-                <th><strong>Mantenimiento</strong></th>
                 <th><strong>Problema</strong></th>
                 <th><strong>Diagnóstico</strong></th>
                 <th><strong>Solución</strong></th>
                 <th><strong>Fecha Solución</strong></th>
+                <th><strong>Estado</strong>
                 </tr>
 
                 <?php
-                $sql = "SELECT folio,fecha_solucion,problema,mantenimiento,Diagnostico,solucion FROM ticket WHERE estado='cerrado'";
+                $sql = "SELECT fecha_solucion,problema,Diagnostico,solucion,folio FROM ticket WHERE estado='cerrado'";
                 $result = mysql_query($sql, $conn) or die(mysql_error());
                 if (!$result) {
                     die("<p>Fallo en la incercion de registro en la Base de datos;" . mysql_error() . "</p>");
                 } else {
                     while ($row=  mysql_fetch_assoc($result)){
                         
-                        echo '</td><td>';
+                        
+                         
+                        echo'</td><td>';
                         echo $row['folio'];
-                        echo '</td><td>';
-                        echo $row['mantenimiento'];
-                        echo '</td><td>';
+                        echo'</td><td>';
                         echo $row['problema'];
                         echo '</td><td>';
                         echo $row['Diagnostico'];
@@ -109,6 +120,8 @@ include_once('session.php');
                         echo '</td><td>';
                         echo $row['fecha_solucion'];
                         echo '</td></tr>';
+                        
+                        
                         
                     } 
                 }
@@ -132,18 +145,6 @@ include_once('session.php');
       ?>
         </div>
         
-        <footer>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    
-    <div class="footer-bottom">
-        <div class="container">
-            
-            <div class="pull-right">
-                <p>Copyright ©Yvette Hernández Acevedo y Roberto Armando Correa Rivera</p>
-            </div>
-        </div>
-    </div>
-    <!--/.footer-bottom--> 
-</footer>
+       
     </body>
 </html>

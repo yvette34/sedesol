@@ -4,13 +4,13 @@
 <!DOCTYPE HTML>
     <html>
         <head>
-            <meta name="viewport" content="initial-scale=1.0">
+            <meta name="viewport" content="initial-scale=1.1">
             <script src="js/jquery.js" type="text/javascript"></script>
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
             <link href="Style.css" rel="stylesheet" type="text/css">
             <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
             
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
             <script type="text/javascript" src="js/jquery.js"></script>
             
@@ -21,7 +21,8 @@
                          <?php
             if ($_SESSION['tipo'] == 'admin'){
                 ?>
-                <nav class="navbar navbar-inverse navbar-fixed-top">
+               
+             <nav class="navbar navbar-inverse navbar-fixed-top">
                 <div class="container-fluid">
                     <div class="navbar-header">
 
@@ -31,13 +32,33 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>                        
                                 </button>
+                            <ul class="nav navbar-nav">
                                 
-                                <li><a href="principal.php">SEDESOL</a></li>       
-                                <li class="active"><a href="Tickets.php">Agregar Nuevo Ticket</a></li> 
-                                <li><a href="Personal.php">Personal</a></li>       
-                                <li><a href="Area.php">Área</a></li>        
-                                <li><a href="Tickets_Abiertos.php">Lista De Tickets Abiertos</a></li>     
-                                <li><a href="Ticket_Cerrado.php">Lista De Ticket Cerrado</a></li>               
+                                <li><a href="principal.php">SEDESOL</a></li>
+
+                                  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Tickets</a>
+                                <ul class="dropdown-menu">
+                                 <li class="active"><a href="Tickets.php">Agregar Nuevo Ticket</a></li>
+                                 <li><a href="Tickets_Abiertos.php">Lista De Tickets Abiertos</a></li>     
+                                    <li><a href="Ticket_Cerrado.php">Lista De Ticket Cerrado</a></li> 
+                                </ul>
+                                 </li>
+
+                                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Personal</a>
+                                <ul class="dropdown-menu">
+                                    <li class="active"><a href="Personal.php  ?>">Agregar Personal</a></li>
+                                    <li ><a href="tabla_personal.php">Tabla del Personal</a></li>     
+                                  
+                                </ul>
+                                 </li>
+                
+                                  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Área</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="Area.php">Agregar Área</a></li>
+                                    <li class="active"><a href="ver_area.php">Tabla del Área</a></li>   
+                                </ul>
+                                 </li> 
+                                              
                                 <li><a href="AgregarUsuario.php">Agregar Usuario</a></li>             
                                 <li><a href="logout.php">Cerrar Sesión</a></li>            
                                
@@ -50,7 +71,7 @@
             <?php
             }else{
             ?>
-                        <nav class="navbar navbar-inverse navbar-fixed-top">
+                      <nav class="navbar navbar-inverse navbar-fixed-top">
                 <div class="container-fluid">
                     <div class="navbar-header">
 
@@ -60,6 +81,7 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>                        
                                 </button>
+        <ul class="nav navbar-nav">
 
                  <?php
                 //echo $_SESSION['nombre'];
@@ -100,12 +122,12 @@
                             </div>
                             <div class="form-group">
                             <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-sm-4">
                                     <label for="mantenimiento[]"><b>Asistencia Técnica</b></label>        
                                     <label><b>Indique los problemas que presente el equipo:</b></label> 
                             </div>
                             <div class="col-md-4">
-                                        <label for="mantenimiento[]"><b>Revisión / mantenimiento[]</b></label>  
+                                        <label for="mantenimiento[]"><b>Revisión / mantenimiento</b></label>  
                                         <label><b>Indique los dispositivos con:</b></label>
                             </div>
                             <div class="col-md-4">
@@ -113,47 +135,47 @@
                                         <label><b>Seleccione los programas  a instalar:</b></label>
                             </div>
                             
-                                 <div class=" radio row">
+                                 <div class="radio row">
                                 <div class="radio">
                                     <div class="radio col-md-4">
-                                       
-                                        <input type="checkbox" name="mantenimiento[]" value="1"> No Prende              <br>
-                                        <input type="checkbox" name="mantenimiento[]" value="2"> Se Reinicia            <br>
-                                        <input type="checkbox" name="mantenimiento[]" value="3"> Malware (virus)        <br>
-                                        <input type="checkbox" name="mantenimiento[]" value="4"> Configurar Correo      <br>            
-                                        <input type="checkbox" name="mantenimiento[]" value="5"> Archivos Perdidos      <br>
-                                        <input type="checkbox" name="mantenimiento[]" value="6"> Bloqueo/lentitud       <br>
-                                        <input type="checkbox" name="mantenimiento[]" value="7"> Mensaje de Error       <br>
-                                        <input type="checkbox" name="mantenimiento[]" value="8"> Conexión a la Red      <br>
-                                        <input type="checkbox" name="mantenimiento[]" value="9"> Configurar Impresora   <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="1">  No Prende              <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="2">  Se Reinicia            <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="3">  Malware (virus)        <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="4">  Configurar Correo      <br>            
+                                        <input type="checkbox" name="mantenimiento[]" value="5">  Archivos Perdidos      <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="6">  Bloqueo/lentitud       <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="7">  Mensaje de Error       <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="8">  Conexión a la Red      <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="9">  Configurar Impresora   <br>
+                                    </div>
+                                    
+                                    <div class="radio col-md-4">
+                                        <input type="checkbox" name="mantenimiento[]" value="10">  Impresora             <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="11">  Teclado/Ratón         <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="12">  Pantalla              <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="13">  Regulador             <br>            
+                                        <input type="checkbox" name="mantenimiento[]" value="14">  Unidad CD/DVD         <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="15">  Puertos USB           <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="16">  Sonido                <br>
                                     </div>
                                    
+                                   
                                     <div class="radio col-md-4">
-                                       
-                                        <input type="checkbox" name="mantenimiento[]" value="10"> Impresora             <br>
-                                        <input type="checkbox" name="mantenimiento[]" value="11"> Teclado/Ratón         <br>
-                                        <input type="checkbox" name="mantenimiento[]" value="12"> Pantalla              <br>
-                                        <input type="checkbox" name="mantenimiento[]" value="13"> Regulador             <br>            
-                                        <input type="checkbox" name="mantenimiento[]" value="14"> Unidad CD/DVD         <br>
-                                        <input type="checkbox" name="mantenimiento[]" value="15"> Puertos USB           <br>
-                                        <input type="checkbox" name="mantenimiento[]" value="16"> Sonido                <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="17">  Formateo (Todo)       <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="18">  Antivirus             <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="19">  Paquete Office        <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="20">  Lector Archivos PD    <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="21">  PhotoShop - Core      <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="22">  Quemador CD/DVD       <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="23">  Impresora             <br>
+                                        <input type="checkbox" name="mantenimiento[]" value="24">  Reproductor DVD       <br>
                                     </div>
-                                    <div class="radio col-md-4">
-                                        
-                                        <input type="checkbox" name="mantenimiento[]" value="17"> Formateo (Todo)       <br>
-                                        <input type="checkbox" name="mantenimiento[]" value="18">Antivirus              <br>
-                                        <input type="checkbox" name="mantenimiento[]" value="19"> Paquete Office        <br>
-                                        <input type="checkbox" name="mantenimiento[]" value="20"> Lector Archivos PD    <br>
-                                        <input type="checkbox" name="mantenimiento[]" value="21"> PhotoShop - Core      <br>
-                                        <input type="checkbox" name="mantenimiento[]" value="22"> Quemador CD/DVD       <br>
-                                        <input type="checkbox" name="mantenimiento[]" value="23"> Impresora             <br>
-                                        <input type="checkbox" name="mantenimiento[]" value="24"> Reproductor DVD       <br>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>>
+                </div>
                            
                             <div class="form-group">
                             <div class="row">
@@ -207,7 +229,7 @@
                                 <div class="col-md-2">
                                     <label for="so" >Sistemas Operativos:</label><br>
                                     <select name="so" id="so">
-                                        <option  value = ""  disabled  selected  style = " display : none ; " >-- Eliga una --</option> 
+                                        <option  value = ""  disabled  selected  style = " display : none ; " >-- Eliga uno --</option> 
                                         <option value="1">windows XP</option>
                                         <option value="2">windows 7</option>
                                         <option value="3">windows 8</option>
@@ -222,7 +244,7 @@
                                 <div class="col-md-2"><br>
                                     <label for="tipo_de_equipo" >Tipo De Equipo:</label><br>
                                     <select name="tipo_de_equipo" id="tipo_de_equipo">
-                                        <option  value = ""  disabled  selected  style = " display : none ; " >-- Eliga una --</option> 
+                                        <option  value = ""  disabled  selected  style = " display : none ; " >-- Eliga uno --</option> 
                                         <option value="1">LapTop</option>
                                         <option value="2">Escritorio</option>
                                         <option value="3">Impresora</option>
@@ -234,7 +256,7 @@
                             <div class="row">
                                 <div class="col-md-12"><br>
                                     <label for="problema">Problema:</label><br /><br>
-                                    <textarea id="problema" name="problema" rows="7" placeholder="Describa el problema" cols="30"></textarea><br /><br>
+                                    <textarea id="problema" name="problema" rows="7" placeholder="Describa el problema" cols="156"></textarea><br /><br>
                                 </div>
                                 <div class="col-sm-offset-5">
                                     <button type="submit" class="btn btn-success">Guardar</button>

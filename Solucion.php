@@ -26,13 +26,30 @@ $folio=$_GET['folio'];
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>                        
                                 </button>
-                                
-                                <li><a href="principal.php">SEDESOL</a></li>       
-                                <li ><a href="Tickets.php">Agregar Nuevo Ticket</a></li> 
-                                <li><a href="Personal.php">Personal</a></li>       
-                                <li><a href="Area.php">Área</a></li>        
-                                <li class="active"><a href="Tickets_Abiertos.php">Lista De Tickets Abiertos</a></li>     
-                                <li><a href="Ticket_Cerrado.php">Lista De Ticket Cerrado</a></li>               
+                                      <li><a href="principal.php">SEDESOL</a></li>
+                                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Tickets</a>
+                <ul class="dropdown-menu">
+                  <li><a href="Tickets.php">Agregar Nuevo Ticket</a></li>
+                  <li><a href="Tickets_Abiertos.php">Lista De Tickets Abiertos</a></li>     
+                  <li class="active"><a href="Ticket_Cerrado.php">Lista De Ticket Cerrado</a></li> 
+                 </ul>
+             </li>
+                
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Personal</a>
+                                <ul class="dropdown-menu">
+                                    <li class="active"><a href="Personal.php  ?>">Agregar Personal</a></li>
+                                    <li ><a href="tabla_personal.php">Tabla del Personal</a></li>     
+                                  
+                                </ul>
+                                 </li>
+                
+                  
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Área</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="Area.php">Agregar Área</a></li>
+                                    <li class="active"><a href="ver_area.php">Tabla del Área</a></li>   
+                                </ul>
+                                 </li>              
                                 <li><a href="AgregarUsuario.php">Agregar Usuario</a></li>             
                                 <li><a href="logout.php">Cerrar Sesión</a></li>            
                                
@@ -45,7 +62,7 @@ $folio=$_GET['folio'];
             
 
         <form action="resolverticket.php" method="POST" >
-            <input type="hidden" name="ticket" id="ticket" value="<?php   echo $ticket; ?>" />
+            <input type="hidden" name="folio" id="folio" value="<?php   echo $folio; ?>" />
 
 
             <div class="form-group"></div>
@@ -54,14 +71,14 @@ $folio=$_GET['folio'];
             <div class="row col-md-16">
                 <div class="container">
                     <label for="Diagnostico">Diagnositicó:</label><br /><br>
-                    <textarea id="Diagnostico" class="from-control" name="Diagnostico" rows="10" cols="80"></textarea><br /><br>
+                    <textarea id="Diagnostico" class="from-control" name="Diagnostico" rows="7" cols="80"></textarea><br /><br>
 
                     <label for="solucion" class="">Solución:</label><br /><br>
-                    <textarea id="solucion" class="from-control" name="solucion" rows="10" cols="80"></textarea><br /><br>
+                    <textarea id="solucion" class="from-control" name="solucion" rows="7" cols="80"></textarea><br /><br>
                 </div>
             </div>
             <div class="col-sm-offset-0 col-sm-10">
-                <button type="submit" class="btn btn-success">Guardar</button>
+                <button type="submit" href="Ticket_Cerrado.php" class="btn btn-success">Guardar</button>
             </div>
         </form> 
         </div>

@@ -2,7 +2,7 @@
 include "conexion.php";
 session_start();
 
-$ticket = $_POST['ticket'];
+$folio = isset($_POST['folio'])? $_POST['folio']:'';
 $Diagnostico = $_POST['Diagnostico'];
 $solucion = $_POST['solucion'];
 
@@ -11,7 +11,7 @@ $fecha_solucion=  date("Y-m-d");
         
 $sql = "UPDATE ticket
 SET Diagnostico = '$Diagnostico', Solucion = '$solucion',fecha_solucion = '$fecha_solucion',estado='cerrado'
-WHERE ticket='$ticket'";
+WHERE folio='$folio'";
 $result = mysql_query($sql, $conn) or die(mysql_error());
 if (!$result) {
     die("<p>Fallo en la incercion de registro en la Base de datos;" . mysql_error() . "</p>");
