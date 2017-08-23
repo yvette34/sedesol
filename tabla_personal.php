@@ -103,26 +103,28 @@ include_once('session.php');
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                  <?php echo $_SESSION['nombre'];?><span class="caret"></span></a>
                                  <ul class="dropdown-menu">
-                                <li class="active"><a href="logout.php">Cerrar Sessión</a></li>
+                                <li class="active"><a href="logout.php">Cerrar Sesión</a></li>
                              </li>   
                              </ul>
     </div>
 
 </div>
 </nav>
-
-            
+<br>
+    <br>
+    <br>        
 	<div class=" col-sm-12">
     <div class="offtset col-sm-10"></div>
     	<img  src="logoestado.jpg" width="120" height="100" alt="Ningno">
     </div> 
 
+ <br>
     <br>
-    <br> 
+    <br>
      
      <div class="espacio">
             <div class="container">
-              <table  class="table  table-bordered">
+              <table  class="table table-striped">
             <tbody>
                 <tr>
                 <th><strong>Nombre</strong></th>
@@ -148,7 +150,7 @@ include_once('session.php');
                         echo $row['apellido_m'];
                         echo '</td><td>';
                         echo $row['id_area'];
-                        echo '</td><td>';
+                        echo '</td><tr>';
                        
                         
                     } 

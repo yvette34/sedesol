@@ -74,15 +74,7 @@ include_once('session.php');
                     </ul>
                  </li>  
               
-                              <li class="dropdown">
-                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"  data-close-others="false">Área<span class="caret"></span></a>
-                   <ul class="dropdown-menu" role="menu">
-                          <li><a href="Area.php">Agregar Área</a></li>
-                          <li><a href="ver_area.php">Tabla del Área</a></li>
-                        
-
-                    </ul>
-                 </li> 
+                
             
                     <li class="dropdown">
                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"  data-close-others="false">Agregar Usuario<span class="caret"></span></a>
@@ -102,7 +94,7 @@ include_once('session.php');
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                  <?php echo $_SESSION['nombre'];?><span class="caret"></span></a>
                                  <ul class="dropdown-menu">
-                                <li class="active"><a href="logout.php">Cerrar Sessión</a></li>
+                                <li class="active"><a href="logout.php">Cerrar Sesión</a></li>
                              </li>   
                              </ul>
     </div>
@@ -110,25 +102,30 @@ include_once('session.php');
 </div>
 </nav>
 
+      <br>
+      <br>
+      <br>
+
             <div class=" col-sm-12">
     <div class="offtset col-sm-10"></div>
       <img  src="logoestado.jpg" width="120" height="100" alt="Ningno">
     </div> 
-    
+    <br>
      <br>
      <br>
-        <div class="espacio">
-            <div class="container">
 
-        <table   class="table table-striped">
+        <div class="espacio">
+            <div class="container">            
+            <table class="table table-striped">
             <tbody>
-                <tr>
-                <th><strong>Área</strong>
+                <tr>              
+                <th><strong>Área</strong></th>
                 <th><strong>Nombre de Área</strong></th>
                 <th><strong>Número de Extensión</strong></th>
                 <th><strong>Piso</strong></th>
-                
                 </tr>
+
+
 
                 <?php
                 $sql = "SELECT id_area,nombre_area,ext,piso FROM areas";
@@ -146,18 +143,12 @@ include_once('session.php');
                         echo $row['ext'];
                         echo '</td><td>';
                         echo $row['piso'];
-                        echo '</td><td>';
-                       
-                        
+                        echo '</td><tr>';
                     } 
                 }
-
                 mysql_close();
-                ?>
-
-
-                
-        </tbody>
+                ?>   
+          </tbody>
         </table>
 
 

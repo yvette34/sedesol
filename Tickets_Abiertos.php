@@ -91,7 +91,7 @@ include_once('session.php');
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                  <?php echo $_SESSION['nombre'];?><span class="caret"></span></a>
                                  <ul class="dropdown-menu">
-                                <li class="active"><a href="logout.php">Cerrar Sessión</a></li>
+                                <li class="active"><a href="logout.php">Cerrar Sesión</a></li>
                              </li>   
                              </ul>
     </div>
@@ -99,10 +99,15 @@ include_once('session.php');
 </div>
 </nav>
 
+       <br>
+       <br>
+       <br>
+
             <div class=" col-sm-12">
     <div class="offtset col-sm-10"></div>
       <img  src="logoestado.jpg" width="120" height="100" alt="Ningno">
     </div> 
+      <br>
       <br>
       <br>
         <div class="espacio">

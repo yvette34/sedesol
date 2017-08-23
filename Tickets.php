@@ -83,7 +83,7 @@
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                  <?php echo $_SESSION['nombre'];?><span class="caret"></span></a>
                                  <ul class="dropdown-menu">
-                                <li class="active"><a href="logout.php">Cerrar Sessión</a></li>
+                                <li class="active"><a href="logout.php">Cerrar Sesión</a></li>
                              </li>   
                              </ul>
                     </div>
@@ -207,7 +207,7 @@
                       <div class="container">
                       <div class="form-group">
                       <div class="row">
-                      <div class="col-xs-6 col-sm-3""> 
+                      <div class="col-xs-6 col-md-4"> 
                       <label for="noinventario" >Núm. Inventario:</label>
                     <input type="text"class="form-control" id="noinventario" placeholder="Introduzca el núm. de inventario" name="noinventario" required> 
                    </div>

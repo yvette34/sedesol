@@ -92,9 +92,9 @@ and open the template in the editor.
                         <ul class="nav navbar-nav navbar-right">
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                 <?php echo $_SESSION['nombre'];?><span class="caret"></span></a>
+                                 <?php echo $_SESSION['nombre'];?>m<span class="caret"></span></a>
                                  <ul class="dropdown-menu">
-                                <li class="active"><a href="logout.php">Cerrar Sessión</a></li>
+                                <li class="active"><a href="logout.php">Cerrar Sesión</a></li>
                              </li>   
                              </ul>
     </div>
