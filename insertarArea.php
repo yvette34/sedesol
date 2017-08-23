@@ -8,7 +8,7 @@ $ext=$_POST['ext'];
 
 $id_usuario = $_SESSION['id'];
 
-$sql = "INSERT INTO areas (nombre_area,piso,ext) VALUES (
+$sql = "INSERT INTO areas (nombre_area,ext,piso) VALUES (
      '$nombre_area','$piso','$ext')";
 $result = mysql_query($sql, $conn) or die(mysql_error());
 if (!$result) {

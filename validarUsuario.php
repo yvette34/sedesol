@@ -15,14 +15,27 @@ include"conexion.php";
             $result = mysql_query($sql, $conn);
             
             if($result){
-               
-                header('Location:AgregarUsuario.php');
+   header("Location:AgregarUsuario.php");
                 echo "<SCRIPT TYPE='text/javascript'> alert(\"Datos Guardados\"); 
             window.location='AgregarUsuario.php'</SCRIPT>";
                 
             } 
-            
+            else{
+            header("Location:AgregarUsuario.php");
+            echo "<SCRIPT TYPE='text/javascript'> alert(\"No se guardaron los datos\"); 
+            window.location='AgregarUsuario.php'</SCRIPT>";
+                echo "sbgk";
+            }
+
+        }else
+        {
+         
+            echo "<SCRIPT TYPE='text/javascript'> alert(\"No se guardaron los datos\"); 
+            window.location='AgregarUsuario.php'</SCRIPT>";
+                echo "sbgk";
+   
         }
+        
         
 
  

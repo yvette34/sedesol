@@ -28,7 +28,7 @@ class controlAreas {
         
         //poner select en blanco
         $html = '';
-        $html .='<option  value = ""  disabled  selected  style = " display : none ; " > Cargando Área</option>';
+        $html .='<option  value = ""  disabled  selected  style = " display : none ; " > Seleccionar Área</option>';
 
         while ($row = mysql_fetch_array($sql)){
             $id = $row['id_area'];

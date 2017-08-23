@@ -6,10 +6,10 @@ session_destroy();
 <html>
     <head>
         <title>Iniciar Sesión</title>
-        <meta name="viewport" content="initial-scale=1.0">
+        <meta name="viewport" content="initial-scale=1.1">
         <meta charset="utf-8">
         
-        <link href="estilo.css" rel="stylesheet" type="text/css">
+        <link href="estilo2.css" rel="stylesheet" type="text/css">
         <link href="Style.css" rel="stylesheet" type="text/css">
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
         <script src="js/jquery.js" type="text/javascript"></script>
@@ -21,9 +21,13 @@ session_destroy();
 
 
 
-    <body background="sedesol1.jpg" style="background-repeat: no-repeat; background-position: center center;">
-                  
-            <div class="container">
+    <body>
+     
+<div class="container">
+    <img  src="sedesol1.jpg" width="1000" height="160">
+    </div>
+    
+         <div class="container">
                 <center>
            <h2><b>Sistema De Soporte Técnico</b></h2>
                 </center>
@@ -35,7 +39,7 @@ session_destroy();
                         <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Escribir contraseña" required><br> 
                         <button type="submit" class="btn btn-success">ENTRAR</button><br>
                     </div> 
-                                                
+               
                 </form>
             
         </div>

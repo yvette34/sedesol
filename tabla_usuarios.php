@@ -21,9 +21,8 @@ include_once('session.php');
         <script type="text/javascript" src="js/evento_areas.js"></script>
         <title>Tabla personal</title>
     </head>
-    <body>
-
-
+    <body >
+        
              <?php
             if ($_SESSION['tipo'] == 'admin'){
                 ?>
@@ -44,21 +43,19 @@ include_once('session.php');
                 ?>
 
                
-            <li><a href="principal.php">SEDESOL</a></li> 
+            <li><a href="principal.php">SEDESOL</a></li>  
 
-
-                     <li class="dropdown">
+                      <li class="dropdown">
                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"  data-close-others="false">Personal<span class="caret"></span></a>
                    <ul class="dropdown-menu" role="menu">
                           <li><a href="Personal.php">Agregar Personal</a></li>
-                          <li class="active"><a href="tabla_personal.php">Tabla del Personal</a></li>
+                          <li><a href="tabla_personal.php">Tabla del Personal</a></li>
                         
 
                     </ul>
                  </li>  
-                 
-                     <li class="dropdown">
-                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"  data-close-others="false">Área<span class="caret"></span></a>
+                 <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"  data-close-others="false">Área<span class="caret"></span></a>
                    <ul class="dropdown-menu" role="menu">
                           <li><a href="Area.php">Agregar Área</a></li>
                           <li><a href="ver_area.php">Tabla del Área</a></li>
@@ -66,8 +63,7 @@ include_once('session.php');
 
                     </ul>
                  </li>  
-                
-                           
+
                       <li class="dropdown">
                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"  data-close-others="false">Tickets<span class="caret"></span></a>
                    <ul class="dropdown-menu" role="menu">
@@ -76,24 +72,16 @@ include_once('session.php');
                           <li><a href="Ticket_Cerrado.php">Ticket Cerrado</a></li>
 
                     </ul>
-                 </li>  
-               
-                               
-                    
- <li class="dropdown">
-                           
-                        
-                  
+                 </li>                       
+
                     <li class="dropdown">
                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"  data-close-others="false">Agregar Usuario<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                           <li> <a href="AgregarUsuario.php">Agregar Nuevo Usuario</a></li>
-                          <li><a href="tabla_usuarios.php"> Tabla de usuarios</a></li>
+                          <li class="active"><a href="tabla_usuarios.php"> Tabla de usuarios</a></li>
                     </ul>
                  </li>
-
-                  <li> <a href="acerca_de.php">Acerca de</a>   </li>
-             
+                 <li> <a href="acerca_de.php">Acerca de</a>   </li>
 
         </ul>
         </div>
@@ -111,35 +99,33 @@ include_once('session.php');
 </div>
 </nav>
 
-            
-	<div class=" col-sm-12">
+            <div class=" col-sm-12">
     <div class="offtset col-sm-10"></div>
-    	<img  src="logoestado.jpg" width="120" height="100" alt="Ningno">
+      <img  src="logoestado.jpg" width="120" height="100" alt="Ningno">
     </div> 
-
-    <br>
-    <br> 
-     
-     <div class="espacio">
+      
+      <br>
+      <br>
+        <div class="espacio">
             <div class="container">
-              <table  class="table  table-bordered">
+
+        <table class="table table-striped">
             <tbody>
                 <tr>
                 <th><strong>Nombre</strong></th>
                 <th><strong>Apellido Paterno</strong></th>
                 <th><strong>Apellido Materno</strong></th>
-                <th><strong>Área</strong></th>
-                 
+                <th><strong>Usuario</strong></th>
+                <th><strong>Tipo de Usuario</strong></th>
                 </tr>
- 
+
                 <?php
-                $sql = "SELECT nombre,apellido_p,apellido_m,id_area FROM Personal ";
+                $sql = "SELECT nombre,apellido_p,apellido_m,usuario,tipo FROM usuarios ";
                 $result = mysql_query($sql, $conn) or die(mysql_error());
                 if (!$result) {
                     die("<p>Fallo en la incercion de registro en la Base de datos;" . mysql_error() . "</p>");
                 } else {
                     while ($row=  mysql_fetch_assoc($result)){
-                      
                         echo "<tr><td>";
                         echo $row['nombre'];
                         echo '</td><td>';
@@ -147,9 +133,10 @@ include_once('session.php');
                         echo '</td><td>';
                         echo $row['apellido_m'];
                         echo '</td><td>';
-                        echo $row['id_area'];
+                        echo $row['usuario'];
                         echo '</td><td>';
-                       
+                        echo $row['tipo'];
+                        echo '</td><td>';
                         
                     } 
                 }
@@ -161,13 +148,17 @@ include_once('session.php');
                 
         </tbody>
         </table>
-          </div><!--cierre div de contenido-->
-         
+
+
+
+        </div><!--cierre div de contenido-->
          <?php
             }else {
                 header("Location:principal.php");
             }
       ?>
-       </div> 
+        </div>
+        
+     
     </body>
 </html>

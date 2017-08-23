@@ -17,7 +17,7 @@ if (!$result) {
     die("<p>Fallo en la incercion de registro en la Base de datos;" . mysql_error() . "</p>");
 } else {
     echo "<SCRIPT TYPE='text/javascript'> alert(\"Datos Guardados\"); 
-            window.location='Tickets_Abiertos.php'</SCRIPT>";
+            window.location='Ticket_Cerrado.php'</SCRIPT>";
 }
 
 mysql_close();

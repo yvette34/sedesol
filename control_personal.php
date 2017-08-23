@@ -28,7 +28,7 @@ class controlPersonal {
         
         //poner select en blanco
         $html = '';
-        $html .='<option  value = ""  disabled  selected  style = " display : none ; " > Cargando Personal... </option>';
+        $html .='<option  value = ""  disabled  selected  style = " display : none ; " > Seleccionar Personal </option>';
 
         while ($row = mysql_fetch_array($sql)){
             $id = $row['id_personal'];
