@@ -22,6 +22,7 @@ and open the template in the editor.
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/validations.js" ></script>
         <title>Agregar Usuario o Administrador </title>
     </head>
 
@@ -114,17 +115,17 @@ and open the template in the editor.
         
                             <div class="form-group col-md-7">  
                                 <label for="nombre" >Nombre:</label>
-                                <input type="text"   class="form-control" id="nombre" placeholder=" Introduzca nombre" name="nombre" required> 
+                                <input type="text" class="form-control validateText" id="nombre" placeholder=" Introduzca nombre" name="nombre" required> 
                             </div>
                              
                             
                             <div class="form-group col-md-7">  
                                 <label for="apellido_p">Apellido Paterno:</label><br>
-                                <input type="text"   class="form-control" id="apellido_p" name="apellido_p"  placeholder="Introduzca apellido paterno" required > <br>
+                                <input type="text"   class="form-control validateText" id="apellido_p" name="apellido_p"  placeholder="Introduzca apellido paterno" required > <br>
                             </div>
                             <div class="form-group col-md-7">  
                                 <label for="apellido_m">Apellido Materno:</label>
-                                <input type="text"   class="form-control" id="apellido_m"placeholder="Introduzca apellido materno" name="apellido_m" required> 
+                                <input type="text"   class="form-control validateText" id="apellido_m"placeholder="Introduzca apellido materno" name="apellido_m" required> 
                             </div>
                             
                                 <div class="form-group col-md-7">  

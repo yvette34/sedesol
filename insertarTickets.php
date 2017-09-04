@@ -10,13 +10,13 @@ $fecha_captura = $_POST['fecha_captura'];
 $problema = $_POST['problema'];
 $id_personal = $_POST['personal'];
 $tipo_de_equipo = $_POST['tipo_de_equipo'];
-$marca=$_POST['marca'];
-$modelo=$_POST['modelo'];
+$marca=validateNumber($_POST['marca']);
+$modelo=validateText($_POST['modelo']);
 $ram=$_POST['ram'];
 $discoduro=$_POST['discoduro'];
 $mac=$_POST['mac'];
 $ip=$_POST['ip'];
-$no_inventario=$_POST['noinventario'];
+$no_inventario=validateNumber($_POST['noinventario']);
 $so=$_POST['so'];
 $id_usuario = $_SESSION['id'];
 

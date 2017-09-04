@@ -25,16 +25,16 @@ include_once('session.php');
              <?php
             if ($_SESSION['tipo'] == 'admin'){
                 ?>
-             <nav class="navbar navbar-default navbar-fixed-top">
-                <div class="container">
+                <nav class="navbar navbar-default navbar-fixed-top">
+                  <div class="container">
                     <div class="navbar-header">
 
-                            <ul class="nav navbar-nav">
-                                <button type="button"class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>                        
-                                </button>
+                      <ul class="nav navbar-nav">
+                        <button type="button"class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>                        
+                        </button>
 
 
           
@@ -43,92 +43,92 @@ include_once('session.php');
                 ?>
 
                
-            <li><a href="principal.php">SEDESOL</a></li>       
-              <li class="dropdown">
+                <li><a href="principal.php">SEDESOL</a></li>       
+                <li class="dropdown">
 
-                         <li class="dropdown">
-                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"  data-close-others="false">Personal<span class="caret"></span></a>
+                 <li class="dropdown">
+                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"  data-close-others="false">Personal<span class="caret"></span></a>
                    <ul class="dropdown-menu" role="menu">
-                          <li><a href="Personal.php">Agregar Personal</a></li>
-                          <li><a href="tabla_personal.php">Tabla del Personal</a></li>
-                        
+                    <li><a href="Personal.php">Agregar Personal</a></li>
+                    <li><a href="tabla_personal.php">Tabla del Personal</a></li>
+                    
 
-                    </ul>
-                 </li>  
-                            <li class="dropdown">
-                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"  data-close-others="false">Área<span class="caret"></span></a>
-                   <ul class="dropdown-menu" role="menu">
-                          <li><a href="Area.php">Agregar Área</a></li>
-                          <li><a href="ver_area.php">Tabla del Área</a></li>
-                        
+                  </ul>
+                </li>  
+                <li class="dropdown">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"  data-close-others="false">Área<span class="caret"></span></a>
+                 <ul class="dropdown-menu" role="menu">
+                  <li><a href="Area.php">Agregar Área</a></li>
+                  <li><a href="ver_area.php">Tabla del Área</a></li>
+                  
 
-                    </ul>
-                 </li>  
-                         
-                            <li class="dropdown">
-                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"  data-close-others="false">Tickets<span class="caret"></span></a>
-                   <ul class="dropdown-menu" role="menu">
-                          <li><a href="Tickets.php">Agregar Ticket</a></li>
-                          <li><a href="Tickets_Abiertos.php">Tickets Abiertos</a></li>
-                          <li class="active"><a href="Ticket_Cerrado.php">Ticket Cerrado</a></li>
-
-                    </ul>
-                 </li>  
+                </ul>
+              </li>  
               
-                    <li class="dropdown">
-                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"  data-close-others="false">Agregar Usuario<span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                          <li> <a href="AgregarUsuario.php">Agregar Nuevo Usuario</a></li>
-                          <li><a href="tabla_usuarios.php"> Tabla de usuarios</a></li>
-                    </ul>
-                 </li>
-                    
-                
-                   <li> <a href="acerca_de.php">Acerca de</a>   </li>
-                    
+              <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"  data-close-others="false">Tickets<span class="caret"></span></a>
+               <ul class="dropdown-menu" role="menu">
+                <li><a href="Tickets.php">Agregar Ticket</a></li>
+                <li><a href="Tickets_Abiertos.php">Tickets Abiertos</a></li>
+                <li class="active"><a href="Ticket_Cerrado.php">Ticket Cerrado</a></li>
+
+              </ul>
+            </li>  
+            
+            <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"  data-close-others="false">Agregar Usuario<span class="caret"></span></a>
+             <ul class="dropdown-menu" role="menu">
+              <li> <a href="AgregarUsuario.php">Agregar Nuevo Usuario</a></li>
+              <li><a href="tabla_usuarios.php"> Tabla de usuarios</a></li>
+            </ul>
+          </li>
+          
+          
+          <li> <a href="acerca_de.php">Acerca de</a>   </li>
+          
 
         </ul>
-        </div>
-        
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                 <?php echo $_SESSION['nombre'];?><span class="caret"></span></a>
-                                 <ul class="dropdown-menu">
-                                <li class="active"><a href="logout.php">Cerrar Sesión</a></li>
-                             </li>   
-                             </ul>
+      </div>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+           <?php echo $_SESSION['nombre'];?><span class="caret"></span></a>
+           <ul class="dropdown-menu">
+            <li class="active"><a href="logout.php">Cerrar Sesión</a></li>
+          </li>   
+        </ul>
+      </div>
+
     </div>
+  </nav>
+  <br>
+  <br>
+  <br>
 
-</div>
-</nav>
-        <br>
-        <br>
-        <br>
-
-        <div class="col-sm-12">
+  <div class="col-sm-12">
     <div class="offtset col-sm-10"></div>
-      <img  src="logoestado.jpg" width="120" height="100" alt="Ningno">
-    </div> 
-    <br>
-    <br>
-    <br>
-        <div class="espacio">
+    <img  src="logoestado.jpg" width="120" height="100" alt="Ningno">
+  </div> 
+  <br>
+  <br>
+  <br>
+  <div class="espacio">
 
-            <div class="container">
+    <div class="container">
+      
+      <table class="table table-striped">
+        <tbody>
+          <tr>
             
-            <table class="table table-striped">
-            <tbody>
-                <tr>
-                    
-                
-                <th><strong>Folio</strong></th>
-                <th><strong>Problema</strong></th>
-                <th><strong>Diagnóstico</strong></th>
-                <th><strong>Solución</strong></th>
-                <th><strong>Fecha Solución</strong></th>
-                <th><strong>Estado</strong></th>
-                </tr>
+            
+            <th><strong>Folio</strong></th>
+            <th><strong>Problema</strong></th>
+            <th><strong>Diagnóstico</strong></th>
+            <th><strong>Solución</strong></th>
+            <th><strong>Fecha Solución</strong></th>
+            <th><strong>Estado</strong></th>
+          </tr>
 
                 <?php
                 $sql = "SELECT fecha_solucion,problema,Diagnostico,solucion,folio,estado FROM ticket WHERE estado='cerrado'";

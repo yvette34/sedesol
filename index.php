@@ -23,25 +23,25 @@ session_destroy();
 
     <body>
      
-<div class="container">
-    <img  src="sedesol1.jpg" width="1000" height="160">
-    </div>
-    
-         <div class="container">
-                <center>
-           <h2><b>Sistema De Soporte Técnico</b></h2>
-                </center>
-                <form action="validarlogin.php" method="POST">
-                    <div class="boxlogin">
-                        <label for="usuario">Usuario:</label><br>
-                        <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Escribir usuario" required><br>
-                        <label for="contrasena">Contraseña:</label><br>
-                        <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Escribir contraseña" required><br> 
-                        <button type="submit" class="btn btn-success">ENTRAR</button><br>
-                    </div> 
-               
-                </form>
-            
+        <div class="container">
+            <img  src="sedesol1.jpg" width="1000" height="160">
         </div>
-    </body>
+        
+        <div class="container">
+            <center>
+             <h2><b>Sistema De Soporte Técnico</b></h2>
+         </center>
+         <form action="validarlogin.php" method="POST">
+            <div class="boxlogin">
+                <label for="usuario">Usuario:</label><br>
+                <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Escribir usuario" required><br>
+                <label for="contrasena">Contraseña:</label><br>
+                <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Escribir contraseña" required><br> 
+                <button type="submit" class="btn btn-success">ENTRAR</button><br>
+            </div> 
+            
+        </form>
+        
+    </div>
+</body>
 </html>

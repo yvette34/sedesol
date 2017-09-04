@@ -1,11 +1,12 @@
 <?php
 
 include "conexion.php";
+include "validations.php";
 session_start();
 
-$nombre = $_POST['nombre'];
-$apellido_p=$_POST['apellido_p'];
-$apellido_m=$_POST['apellido_m'];
+$nombre = validateText($_POST['nombre']);
+$apellido_p= validateText($_POST['apellido_p']);
+$apellido_m=validateText($_POST['apellido_m']);
 $id_area=$_POST['area'];
 
 $id_usuario = $_SESSION['id'];

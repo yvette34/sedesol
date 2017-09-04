@@ -26,9 +26,9 @@ include_once('session.php');
              <?php
             if ($_SESSION['tipo'] == 'admin'){
                 ?>
-         <nav class="navbar navbar-inverse navbar-fixed-top">
-                <div class="container-fluid">
-                    <div class="navbar-header">
+                <nav class="navbar navbar-inverse navbar-fixed-top">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
 
                             <ul class="nav navbar-nav">
                                 <button type="button"class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -43,53 +43,53 @@ include_once('session.php');
                 ?>
 
                
-            <li><a href="principal.php">SEDESOL</a></li>       
-                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Tickets</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="Tickets.php">Agregar Nuevo Ticket</a></li>
-                                    <li class="active"><a href="Tickets_Abiertos.php">Lista De Tickets Abiertos</a></li>     
-                                    <li><a href="Ticket_Cerrado.php">Lista De Ticket Cerrado</a></li> 
-                                </ul>
-                                 </li>
-                                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Personal</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="Personal.php  ?>">Agregar Personal</a></li>
-                                    <li class="active"><a href="tabla_personal.php">Tabla del Personal</a></li>     
-                                  
-                                </ul>
-                                 </li>
+                <li><a href="principal.php">SEDESOL</a></li>       
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Tickets</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Tickets.php">Agregar Nuevo Ticket</a></li>
+                        <li class="active"><a href="Tickets_Abiertos.php">Lista De Tickets Abiertos</a></li>     
+                        <li><a href="Ticket_Cerrado.php">Lista De Ticket Cerrado</a></li> 
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Personal</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Personal.php  ?>">Agregar Personal</a></li>
+                        <li class="active"><a href="tabla_personal.php">Tabla del Personal</a></li>     
+                        
+                    </ul>
+                </li>
 
-                                  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Área</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="Area.php">Agregar Área</a></li>
-                                    <li class="active"><a href="ver_area.php">Tabla del Área</a></li>   
-                                </ul>
-                                 </li>
-                    <li><a href="AgregarUsuario.php">Agregar Usuario</a></li>
-                    <li><a href="logout.php">Cerrar Sesión</a></li>
-             
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Área</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Area.php">Agregar Área</a></li>
+                        <li class="active"><a href="ver_area.php">Tabla del Área</a></li>   
+                    </ul>
+                </li>
+                <li><a href="AgregarUsuario.php">Agregar Usuario</a></li>
+                <li><a href="logout.php">Cerrar Sesión</a></li>
+                
 
-        </ul>
+            </ul>
         </div>
     </div>
 
 </div>
 </nav>
 
-            
-  
-        <div class="espacio">
-            <div class="container">
+
+
+<div class="espacio">
+    <div class="container">
 
         <table class="table table-striped">
             <tbody>
                 <tr>
-                <th><strong>Nombre</strong></th>
-                <th><strong>Apellido Paterno</strong></th>
-                <th><strong>Apellido Materno</strong></th>
-                <th><strong>Usuario</strong></th>
-                <th><strong>Tipo de Usuario</strong></th>
-               
+                    <th><strong>Nombre</strong></th>
+                    <th><strong>Apellido Paterno</strong></th>
+                    <th><strong>Apellido Materno</strong></th>
+                    <th><strong>Usuario</strong></th>
+                    <th><strong>Tipo de Usuario</strong></th>
+                    
                 </tr>
 
                 <?php
