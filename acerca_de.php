@@ -92,7 +92,7 @@
       <br><br><br>
       <center>
         <p>Versión 1.0</p>
-        <p>Agosto 2017</p>
+        <p>Septiembre 2017</p>
       </center>
 
 
@@ -100,6 +100,8 @@
 
       <br><br><br><br><br><br><br><br><br>
       <div class="jumbotron"> 
+      <font size="3">
+      <font face="Arial">
         <center>
           <div id="copyright">Copyright&copy; 2017 - Sistema creado por Yvette Hernández Acevedo  y Roberto Aramando Correa Rivera para la Secretaría de Desarrollo Social Estatal del estado de Zacatecas - Todos los derechos reservados</div>
         </center>
@@ -108,7 +110,8 @@
           <p>Circuito Cerrado del Gato, Edifico B, Cd. Gobierno, Tercer Piso, Cuarto y Quinto Piso
            C.P. 98160 Zacatecas, Zac. Tel:(492) 491-50-00 Ext: 35180, 35180 y 35183.</p>
          </center>
-
+         </font>
+         </font>
        </div>
      </font>
    </div>
