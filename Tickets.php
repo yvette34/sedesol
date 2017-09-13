@@ -215,7 +215,7 @@
                     <div class="row">
                       <div class="col-xs-6 col-md-4"> <br><br>
                         <label for="noinventario" >Núm. Inventario:</label>
-                        <input type="number"class="form-control" min="1" id="noinventario" placeholder="Introduzca el núm. de inventario" name="noinventario" required> <br><br>
+                        <input type="text"class="form-control validateNumber"  id="noinventario" placeholder="Introduzca el núm. de inventario" name="noinventario" required> <br><br>
                       </div>
                     </div>
                     <div class="row">

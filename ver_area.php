@@ -119,7 +119,7 @@ include_once('session.php');
     <table class="table table-striped">
       <tbody>
         <tr>              
-          <th><strong>Área</strong></th>
+         
           <th><strong>Nombre de Área</strong></th>
           <th><strong>Número de Extensión</strong></th>
           <th><strong>Piso</strong></th>
@@ -135,8 +135,7 @@ include_once('session.php');
                 } else {
                     while ($row=  mysql_fetch_assoc($result)){
                       
-                        echo "<tr><td>";
-                        echo $row['id_area'];
+                       
                         echo '</td><td>';
                         echo $row['nombre_area'];
                         echo '</td><td>';

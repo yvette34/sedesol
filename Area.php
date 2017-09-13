@@ -106,7 +106,7 @@ include_once('session.php');
 
                               <div class="form-group col-md-7">  
                                 <label for="nombre">Número de Extensión:</label>
-                                <input type="number"   class="form-control " id="ext" placeholder="Introduzca el número de extensión"   name="ext" required> 
+                                <input type="number"   class="form-control validateNumber" id="ext" placeholder="Introduzca el número de extensión"   name="ext" required> 
                               </div>
                               
 
