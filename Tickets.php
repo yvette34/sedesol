@@ -4,7 +4,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <meta name="viewport" content="initial-scale=1.1">
+  <meta name="viewport" content="initial-scale=1.1" charset="utf-8">
   <script src="js/jquery.js" type="text/javascript"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="Style.css" rel="stylesheet" type="text/css">
