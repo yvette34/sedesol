@@ -10,8 +10,8 @@
   <link href="Style.css" rel="stylesheet" type="text/css">
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">  
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript src="></script>
-    <script type="text/javascript" src="js/validations.js" ></script>
+  
+  <script type="text/javascript" src="js/validations.js" ></script>
   <script type="text/javascript" src="js/jquery.js"></script> 
 
   <script type="text/javascript" src="js/evento_personal.js"></script>
@@ -215,7 +215,7 @@
                     <div class="row">
                       <div class="col-xs-6 col-md-4"> <br><br>
                         <label for="noinventario" >Núm. Inventario:</label>
-                        <input type="text"class="form-control validateNumber"  id="noinventario" placeholder="Introduzca el núm. de inventario" name="noinventario" required> <br><br>
+                        <input type="text" class="form-control validateNumber" id="noinventario" placeholder="Introduzca el núm. de inventario" name="noinventario" required> <br><br>
                       </div>
                     </div>
                     <div class="row">

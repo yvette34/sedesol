@@ -34,9 +34,12 @@ if (!isset($_SESSION)){
                         header("Location:principal.php");
                     }else{
                         header("Location:index.php");
+
                     }
                 }else{//Habilitado
                      header("Location:index.php");
+                      echo "<SCRIPT TYPE='text/javascript'> alert(\"Bienvenido\"); 
+            window.location='Tickets_Abiertos.php'</SCRIPT>";
                 }
             }//while
 

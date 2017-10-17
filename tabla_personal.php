@@ -135,10 +135,11 @@ include_once('session.php');
           </tr>
           
                 <?php
-                $sql = "SELECT nombre,apellido_p,apellido_m,id_area FROM Personal ";
+                //$sql = "SELECT nombre,apellido_p,apellido_m,id_area FROM Personal ";
+                $sql = "SELECT nombre,apellido_p,apellido_m,nombre_area FROM Personal,areas where personal.id_area=areas.id_area order by nombre_area";
                 $result = mysql_query($sql, $conn) or die(mysql_error());
                 if (!$result) {
-                    die("<p>Fallo en la incercion de registro en la Base de datos;" . mysql_error() . "</p>");
+                    die("<p>Fallo en la insercion de registro en la Base de datos;" . mysql_error() . "</p>");
                 } else {
                     while ($row=  mysql_fetch_assoc($result)){
                       
@@ -149,7 +150,7 @@ include_once('session.php');
                         echo '</td><td>';
                         echo $row['apellido_m'];
                         echo '</td><td>';
-                        echo $row['id_area'];
+                        echo $row['nombre_area'];
                         echo '</td><tr>';
                        
                         
